@@ -1,52 +1,51 @@
 import time
 
+SYSTEM_RUNNING = True
+
 def seo_optimization():
     """Generates AI-powered product descriptions and blog content for SEO."""
-    print("📝 Generating SEO-friendly content for trending products...")
+    print("📝 Running SEO optimization...")
     time.sleep(3)
     print("✅ AI-generated blog posts and product descriptions uploaded for organic Google traffic.")
 
 def email_marketing():
     """Automates AI-generated email campaigns for customer engagement."""
-    print("📧 Sending automated emails with personalized product recommendations...")
+    print("📧 Running email marketing...")
     time.sleep(3)
     print("✅ AI-powered emails successfully sent to potential buyers.")
 
 def affiliate_outreach():
     """Auto-recruits YouTube influencers & bloggers for affiliate marketing."""
-    print("🎯 Identifying high-engagement influencers in trending niches...")
+    print("🎯 Running influencer affiliate outreach...")
     time.sleep(3)
     print("✅ Outreach emails sent to influencers offering exclusive commission deals.")
 
 def forum_and_social_engagement():
     """Uses AI to respond to trending discussions on Reddit, Quora, and forums."""
-    print("💬 Auto-posting AI-generated responses in high-traffic discussions...")
+    print("💬 Running organic engagement automation...")
     time.sleep(3)
-    print("✅ Organic engagement created on key online platforms.")
+    print("✅ AI-generated responses posted in key online discussions.")
+
+def run_marketing_cycle():
+    """Continuously cycles through marketing tasks."""
+    global SYSTEM_RUNNING
+    while SYSTEM_RUNNING:
+        seo_optimization()
+        email_marketing()
+        affiliate_outreach()
+        forum_and_social_engagement()
+        print("🔄 Restarting marketing loop...")
+        time.sleep(10)  # Short delay before repeating cycle
+
+def stop_system():
+    """Stops the marketing system manually."""
+    global SYSTEM_RUNNING
+    SYSTEM_RUNNING = False
+    print("🛑 AI Advertising System Stopped.")
 
 if __name__ == "__main__":
-    print("🚀 AI-Powered Marketing Automation System")
-    
-    while True:
-        print("\nOptions:")
-        print("1: SEO Optimization (Google ranking)")
-        print("2: Email Marketing (AI-generated campaigns)")
-        print("3: Affiliate Outreach (Influencers & content creators)")
-        print("4: Forum & Social Engagement (Reddit, Quora, organic traffic)")
-        print("5: Exit")
-
-        choice = input("Select an advertising method (1-5): ")
-
-        if choice == "1":
-            seo_optimization()
-        elif choice == "2":
-            email_marketing()
-        elif choice == "3":
-            affiliate_outreach()
-        elif choice == "4":
-            forum_and_social_engagement()
-        elif choice == "5":
-            print("🛑 Exiting AI Advertising System.")
-            break
-        else:
-            print("❌ Invalid choice. Please select a number from 1 to 5.")
+    print("🚀 Starting AI-Powered Marketing Automation (Continuous Mode)")
+    try:
+        run_marketing_cycle()
+    except KeyboardInterrupt:
+        stop_system()
