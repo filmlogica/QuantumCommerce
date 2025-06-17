@@ -1,3 +1,5 @@
-poetry add mistralai
 numpy
 pandas
+gunicorn
+mistralai
+flask
