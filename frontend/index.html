@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumCommerce Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>QuantumCommerce Reports</h1>
+        <p>Get real-time market insights and manage your subscription.</p>
+    </header>
 
+    <section id="subscription">
+        <h2>Your Subscription</h2>
+        <p id="subscription-status">Loading...</p>
+        <button id="upgrade-btn">Upgrade Subscription</button>
+    </section>
+
+    <section id="report">
+        <h2>Latest Report</h2>
+        <label for="industry">Select Industry:</label>
+        <select id="industry">
+            <option value="Retail">Retail</option>
+            <option value="Tech">Tech</option>
+            <option value="Finance">Finance</option>
+        </select>
+        
+        <label for="tier">Select Tier:</label>
+        <select id="tier">
+            <option value="Basic">Basic</option>
+            <option value="Pro">Pro</option>
+            <option value="Enterprise">Enterprise</option>
+        </select>
+
+        <button id="fetch-report">Get Report</button>
+        <p id="report-content">Report will appear here...</p>
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
