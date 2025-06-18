@@ -68,7 +68,7 @@ def ping():
     return "Pong!", 200
 
 # Background task to keep Render alive
-RENDER_URL = "https://yourappname.onrender.com/ping"  # Replace with actual Render URL
+RENDER_URL = "https://quantumcommerce.onrender.com/ping"  # Replace with actual Render URL
 PING_INTERVAL = 840  # Ping every 14 minutes (840 seconds)
 
 def keep_alive():
