@@ -13,3 +13,4 @@ torchaudio
 transformers
 fastapi
 uvicorn
+honcho
