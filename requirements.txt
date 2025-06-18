@@ -1,0 +1,10 @@
+flask
+gunicorn
+flask_sqlalchemy
+stripe
+celery
+redis
+requests
+python-dotenv
+pandas
+numpy
