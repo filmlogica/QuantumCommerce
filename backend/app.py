@@ -2,6 +2,9 @@ from flask import Flask, request, jsonify
 import requests
 import os
 
+port = int(os.environ.get("PORT", 8000))  # Default to 8000 if PORT isn't set
+app.run(host="0.0.0.0", port=port)
+
 app = Flask(__name__)
 
 # Stripe Webhook Handling
