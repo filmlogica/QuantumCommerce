@@ -1,6 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+import os
+import uvicorn
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8001))  # Default to 8001 if PORT isn't set
+    uvicorn.run("backend.ai.mistral_api:app", host="0.0.0.0", port=port)
 
 # Load Mistral AI model
 model_name = "mistralai/Mistral-7B"
