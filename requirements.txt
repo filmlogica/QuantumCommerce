@@ -6,7 +6,10 @@ requests
 python-dotenv
 pandas
 numpy
-torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch
+torchvision
+torchaudio 
 transformers
 fastapi
 uvicorn
