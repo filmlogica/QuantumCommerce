@@ -18,11 +18,7 @@ def process_subscription(event):
     user_tier = event['data']['object']['metadata']['tier']
     user_industry = event['data']['object']['metadata']['industry']
     
-    # Queue report generation using Celery
-    generate_report.delay(user_tier, user_industry)
-
-# Scheduled Report Generation
-@celery.task
+    # Scheduled Report Generation
 def generate_report(tier, industry):
     google_trends_data = fetch_google_trends(industry)
     yahoo_finance_data = fetch_yahoo_finance(industry)
