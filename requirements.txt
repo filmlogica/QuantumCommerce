@@ -16,3 +16,4 @@ uvicorn
 honcho
 finnhub-python
 pytrends
+PyPDF2
