@@ -1,1 +1,7 @@
-
+{
+    "basic": "Analyze the latest financial trends based on the following data sources: yfinance stock prices, earnings, volatility; finnhub revenue, key ratios, news sentiment; Pytrends keyword popularity, geographical interest. Summarize key shifts in the market, highlighting emerging opportunities for businesses in the {industry} sector. Focus on recent movements, volatility, and public sentiment surrounding financial trends.",
+    
+    "pro": "Using data from yfinance, finnhub-python, and Pytrends, generate a detailed market analysis for businesses in the {industry} sector. Consider the following: Stock trends from yfinance and their impact on sector stability; Latest finnhub financial indicators, growth forecasts, and institutional investments; Pytrends search demand, reflecting consumer interest in relevant services/products. Identify growth opportunities, market shifts, and industry threats based on emerging financial movements. Generate recommendations on competitive positioning and potential investment strategies tailored to businesses in this space.",
+    
+    "enterprise": "Produce a comprehensive business intelligence report integrating data from: Historical & Real-Time Stock Data via yfinance; Financial Performance & Institutional Actions via finnhub-python; Consumer Interest & Emerging Trends via Pytrends. Construct a predictive model assessing the future viability of industry investments and market opportunities for {industry}. Analyze high-level competitor movements, pricing trends, and macroeconomic influences. Forecast long-term sector stability, integrating AI-powered financial insights. Provide a multi-step strategic plan for optimizing growth and mitigating risks, tailored to industry leaders."
+}
