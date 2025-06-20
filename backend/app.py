@@ -36,9 +36,3 @@ def ping_self():
         except Exception as e:
             logging.warning(f"Self-ping failed: {e}")
         time.sleep(300)
-
-# Optional: enable this when running locally
-if __name__ == "__main__":
-    threading.Thread(target=ping_self, daemon=True).start()
-    execute_workflow()
-    app.run(host="0.0.0.0", port=8000)
