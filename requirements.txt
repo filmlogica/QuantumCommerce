@@ -25,9 +25,8 @@ finnhub-python
 yfinance
 pytrends
 
-# PDF Generation + Keep-Alive
+# PDF Generation
 fpdf
-keep-alive-ping
 
 # CUDA Index for PyTorch
 --extra-index-url https://download.pytorch.org/whl/cu118
