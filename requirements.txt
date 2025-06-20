@@ -1,17 +1,12 @@
-# Core Web
 flask
 flask_sqlalchemy
 fastapi
 uvicorn
 gunicorn
 honcho
-
-# Stripe + HTTP
 stripe
 requests
 python-dotenv
-
-# AI & Data
 torch
 torchvision
 torchaudio 
@@ -19,14 +14,8 @@ transformers
 pandas
 numpy
 urllib3
-
-# Market & Trend Data
 finnhub-python
 yfinance
 pytrends
-
-# PDF Generation
 fpdf
-
-# CUDA Index for PyTorch
 --extra-index-url https://download.pytorch.org/whl/cu118
