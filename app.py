@@ -19,7 +19,7 @@ async def load_quantum_engine():
 def ping_self():
     while True:
         try:
-            requests.get("https://your-service.onrender.com/")
+            requests.get("https://quantumcommerce.onrender.com/")
         except Exception:
             pass
         time.sleep(300)
