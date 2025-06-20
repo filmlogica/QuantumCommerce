@@ -1,20 +1,32 @@
+# Core Web
 flask
-gunicorn
 flask_sqlalchemy
+fastapi
+uvicorn
+gunicorn
+honcho
+
+# Stripe + HTTP
 stripe
 requests
 python-dotenv
-pandas
-numpy
---extra-index-url https://download.pytorch.org/whl/cu118
+
+# AI & Data
 torch
 torchvision
 torchaudio 
 transformers
-fastapi
-uvicorn
-honcho
+pandas
+numpy
+
+# Market & Trend Data
 finnhub-python
+yfinance
 pytrends
+
+# PDF Generation + Keep-Alive
 fpdf
 keep-alive-ping>=1.0.4
+
+# CUDA Index for PyTorch
+--extra-index-url https://download.pytorch.org/whl/cu118
