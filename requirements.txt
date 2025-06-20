@@ -16,5 +16,5 @@ uvicorn
 honcho
 finnhub-python
 pytrends
-reportlab
+fpdf
 keep-alive-ping>=1.0.4
