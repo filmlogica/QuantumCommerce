@@ -17,7 +17,8 @@ torchvision
 torchaudio 
 transformers
 pandas
-numpy
+numpy==1.26.1
+urllib3==2.2.1
 
 # Market & Trend Data
 finnhub-python
@@ -26,7 +27,7 @@ pytrends
 
 # PDF Generation + Keep-Alive
 fpdf
-keep-alive-ping>=1.0.4
+keep-alive-ping==0.0.2
 
 # CUDA Index for PyTorch
 --extra-index-url https://download.pytorch.org/whl/cu118
