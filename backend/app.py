@@ -1,12 +1,12 @@
 import logging
-import time
 import threading
+import time
 import requests
 from flask import Flask
 
 app = Flask(__name__)
 
-# Configure logging
+# Logging setup
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 @app.route("/")
@@ -14,7 +14,7 @@ def home():
     logging.info("💡 QuantumCommerce backend accessed.")
     return "QuantumCommerce backend is running! 🚀"
 
-# Commented out for now — these are startup tasks you can reintroduce via a scheduler or background thread
+# Optional workflow logic (not run automatically)
 def execute_workflow():
     logging.info("🚀 Starting QuantumCommerce execution flow...")
     time.sleep(1)
@@ -28,11 +28,17 @@ def execute_workflow():
     time.sleep(1)
     logging.info("✅ Workflow completed.")
 
+# Keep-alive ping for Render
 def ping_self():
-    while True:
-        try:
-            requests.get("https://quantumcommerce.onrender.com/")
-            logging.info("🔁 Self-ping successful.")
-        except Exception as e:
-            logging.warning(f"Self-ping failed: {e}")
-        time.sleep(300)
+    def loop():
+        while True:
+            try:
+                requests.get("https://quantumcommerce.onrender.com/")
+                logging.info("🔁 Self-ping successful.")
+            except Exception as e:
+                logging.warning(f"Ping failed: {e}")
+            time.sleep(300)
+    threading.Thread(target=loop, daemon=True).start()
+
+# Start self-ping in production
+ping_self()
