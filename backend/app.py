@@ -1,5 +1,3 @@
-from keep_alive_ping import activate_keep_alive
-activate_keep_alive()
 import logging
 import time
 from flask import Flask
