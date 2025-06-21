@@ -20,3 +20,6 @@ def ping_self():
         except Exception:
             pass
         time.sleep(300)
+@app.get("/")
+def read_root():
+    return {"message": "QuantumCommerce backend is running! 🚀"}
