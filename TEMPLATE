@@ -1,1 +1,25 @@
-
+def format_html(title, body):
+    return f"""
+    <html>
+    <head>
+        <title>{title}</title>
+        <style>
+            body {{
+                font-family: Georgia, serif;
+                max-width: 600px;
+                margin: auto;
+                line-height: 1.6;
+                padding: 2em;
+            }}
+            h1 {{
+                text-align: center;
+                font-size: 2em;
+            }}
+        </style>
+    </head>
+    <body>
+        <h1>{title}</h1>
+        <p>{body}</p>
+    </body>
+    </html>
+    """
