@@ -1,1 +1,32 @@
+def format_html(title, body):
+    return f"""
+    <html>
+    <head>
+        <title>{title}</title>
+        <style>
+            body {{
+                font-family: Georgia, serif;
+                max-width: 600px;
+                margin: auto;
+                line-height: 1.6;
+                padding: 2em;
+            }}
+            h1 {{
+                text-align: center;
+                font-size: 2em;
+            }}
+        </style>
+    </head>
+    <body>
+        <h1>{title}</h1>
+        <p>{body}</p>
+    </body>
+    </html>
+    """
 
+html_output = format_html(
+    "1-Click Application Toolkit",
+    "Say goodbye to the job hunt grind. The 1-Click Application Toolkit is a Google Form-powered solution that auto-fills job applications using your input—perfect for tech novices and busy job seekers. Just enter your details once, and let the toolkit do the rest. Whether you're applying to 5 jobs or 50, this tool streamlines the process, saves time, and boosts your chances. No coding, no confusion—just click, fill, and apply. Your next opportunity is one click away."
+)
+
+print(html_output)
