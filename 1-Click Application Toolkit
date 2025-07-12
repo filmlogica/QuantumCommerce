@@ -3,30 +3,61 @@ def format_html(title, body):
     <html>
     <head>
         <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {{
                 font-family: Georgia, serif;
-                max-width: 600px;
+                max-width: 700px;
                 margin: auto;
                 line-height: 1.6;
                 padding: 2em;
+                background-color: #f9f9f9;
+                color: #333;
             }}
             h1 {{
                 text-align: center;
-                font-size: 2em;
+                font-size: 2.2em;
+                margin-bottom: 0.5em;
+            }}
+            .cta {{
+                text-align: center;
+                margin-top: 2em;
+            }}
+            .cta a {{
+                background-color: #007bff;
+                color: white;
+                padding: 0.75em 1.5em;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+            }}
+            .cta a:hover {{
+                background-color: #0056b3;
             }}
         </style>
     </head>
     <body>
         <h1>{title}</h1>
         <p>{body}</p>
+        <div class="cta">
+            <a href="https://buy.stripe.com/test_checkout_link">Start Using the Toolkit</a>
+        </div>
     </body>
     </html>
     """
 
 html_output = format_html(
     "1-Click Application Toolkit",
-    "Say goodbye to the job hunt grind. The 1-Click Application Toolkit is a Google Form-powered solution that auto-fills job applications using your input—perfect for tech novices and busy job seekers. Just enter your details once, and let the toolkit do the rest. Whether you're applying to 5 jobs or 50, this tool streamlines the process, saves time, and boosts your chances. No coding, no confusion—just click, fill, and apply. Your next opportunity is one click away."
+    """Say goodbye to the job hunt grind. The 1-Click Application Toolkit is your shortcut to fast, stress-free job applications—built using a streamlined Google Form that auto-fills applications from your input.
+
+Perfect for tech novices, busy job seekers, and anyone tired of repetitive form-filling, this toolkit lets you enter your details once and reuse them effortlessly across multiple applications. Whether you're applying to 5 jobs or 50, it's faster, smarter, and built to boost your chances.
+
+✅ No coding required  
+✅ Works on any device  
+✅ Saves hours of time  
+✅ Boosts your application success rate
+
+This is more than a form—it’s your personal job-hunting assistant. Just click, fill, and apply. Your next opportunity is literally one click away."""
 )
 
 print(html_output)
